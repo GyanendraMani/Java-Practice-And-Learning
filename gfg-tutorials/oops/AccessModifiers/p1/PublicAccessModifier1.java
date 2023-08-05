@@ -1,4 +1,4 @@
-package oops.AccessModifiers.p1;
+package Oops.AccessModifiers.p1;
 
 public class PublicAccessModifier1 {
     public void display() {

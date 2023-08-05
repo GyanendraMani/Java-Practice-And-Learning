@@ -1,6 +1,6 @@
-package oops.AccessModifiers.MainP;
+package Oops.AccessModifiers.MainP;
 
-import oops.AccessModifiers.p1.*;
+import Oops.AccessModifiers.p1.*;
 
 /**
  * 

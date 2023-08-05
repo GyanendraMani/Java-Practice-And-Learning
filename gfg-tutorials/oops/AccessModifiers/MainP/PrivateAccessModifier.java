@@ -1,4 +1,4 @@
-package oops.AccessModifiers.MainP;
+package Oops.AccessModifiers.MainP;
 
 /**
  * 
