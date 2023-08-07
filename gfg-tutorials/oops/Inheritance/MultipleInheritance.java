@@ -14,33 +14,44 @@ import java.io.*;
  * In java multiple inheritance possible with interfaces
  */
 
-class Parent1 {
-    void fun() {
-
-        // Print statement if this method is called
-        System.out.println("Parent1");
+interface PI1 {
+    default void show() {
+        System.out.println("Default PI1");
     }
 
 }
 
-class Parent2 {
-    void fun() {
-
-        // Print statement if this method is called
-        System.out.println("Parent2");
+interface PI2 {
+    default void show() {
+        System.out.println("Default PI2");
     }
 }
 
-interface PT1{
-    default void show(){
-        System.out.println("Default PT1");
+class MultipleInheritance implements PI1, PI2 {
+    public void show() {
+
+        PI1.super.show();
+        PI2.super.show();
+
     }
 
-}
+    public void showOfPI1() {
+        PI1.super.show();// Should not be used directly in the main method;
+    }
 
+    public void showOfPI2() {
+        PI2.super.show(); // Should not be used directly in the main method;
+    }
 
-public class MultipleInheritance {
     public static void main(String args[]) {
+
+        MultipleInheritance mi = new MultipleInheritance();
+
+        mi.show();
+
+        System.out.println("Now Executing showOfPI1() showOfPI2()");
+        mi.showOfPI1();
+        mi.showOfPI2();
 
     }
 }
